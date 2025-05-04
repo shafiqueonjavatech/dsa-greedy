@@ -19,14 +19,13 @@ public class AssignCookies {
         Arrays.sort ( greedyStudent );
         Arrays.sort ( cookySize );
         
-        int satisfiedStudentCount = 0;
         int i = 0, j = 0;
         while(i < greedyStudent.length && j < cookySize.length){
             if(cookySize[i] >= greedyStudent[i] ){
-                satisfiedStudentCount++;
-                j++;
+                i++;
             }
+            j++;
         }
-       return satisfiedStudentCount;
+       return i;
     }
 }
